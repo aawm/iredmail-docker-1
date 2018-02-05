@@ -16,6 +16,10 @@ services:
     build: roundcube
     image: iredmail/roundcube:staging
 
+  sogo:
+    build: sogo
+    image: iredmail/sogo:staging
+
   memcached:
     image: memcached:1.5.4
 
