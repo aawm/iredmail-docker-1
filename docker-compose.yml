@@ -4,6 +4,9 @@ services:
   nginx:
     build: nginx
     image: iredmail/nginx:staging
+    ports:
+      - '80:80'
+      - '443:443'
 
   iredadmin:
     build: iredadmin
