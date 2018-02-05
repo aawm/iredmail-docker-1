@@ -1,0 +1,37 @@
+version: '3.4'
+
+services:
+  nginx:
+    build: nginx
+    image: iredmail/nginx:staging
+
+  iredadmin:
+    build: iredadmin
+    image: iredmail/iredadmin:staging
+
+  roundcube:
+    build: roundcube
+    image: iredmail/roundcube:staging
+
+  memcached:
+    image: memcached:1.5.4
+
+  postfix:
+    build: postfix
+    image: iredmail/postfix:staging
+
+  amavisd:
+    build: amavisd
+    image: iredmail/amavisd:staging
+
+  spamassassin:
+    build: spamassassin
+    image: iredmail/spamassassin:staging
+
+  clamav:
+    build: clamav
+    image: iredmail/clamav:staging
+
+  dovecot:
+    build: dovecot
+    image: iredmail/dovecot:staging
