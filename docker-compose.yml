@@ -22,6 +22,9 @@ services:
   postfix:
     build: postfix
     image: iredmail/postfix:staging
+    ports:
+      - '25:25'
+      - '587:587'
 
   iredapd:
     build: iredapd
@@ -42,3 +45,8 @@ services:
   dovecot:
     build: dovecot
     image: iredmail/dovecot:staging
+    ports:
+      - '110:110'
+      - '143:143'
+      - '993:993'
+      - '995:995'
