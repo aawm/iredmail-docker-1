@@ -20,6 +20,10 @@ services:
     build: postfix
     image: iredmail/postfix:staging
 
+  iredapd:
+    build: iredapd
+    image: iredmail/iredapd:staging
+
   amavisd:
     build: amavisd
     image: iredmail/amavisd:staging
